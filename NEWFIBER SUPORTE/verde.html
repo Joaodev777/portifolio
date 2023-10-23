@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewFiber Internet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-box">
+        <h2><img src="img/logo.png" alt=""></h2>
+        <form>
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>Usuario</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="">
+                <label>Senha</label>
+            </div>
+            <form>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">Aceito os termos de condições</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="log" required>
+                    <label for="log">Logar com Instagram</label>
+                </div>
+
+                <a href="#" class="button">Entrar</a>
+
+
+            </form>
+        </form>
+    </div>
+    <script>
+        // Função para mostrar o modal
+        function openModal() {
+            var modal = document.getElementById("termsModal");
+            modal.style.display = "block";
+            document.body.classList.add("modal-open");
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            var modal = document.getElementById("termsModal");
+            modal.style.display = "none";
+            document.body.classList.remove("modal-open");
+        }
+
+        // Event listener para abrir o modal quando a caixa de seleção é clicada
+        document.getElementById("terms").addEventListener("click", function () {
+            openModal();
+        });
+
+
+    </script>
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1 style="text-decoration: underline;">Termos e Condições</h1>
+            <p>Aqui estão os termos e condições do nosso serviço...</p>
+            <button onclick="closeModal()" class="ok">OK</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
